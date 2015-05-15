@@ -22,9 +22,14 @@ script:
 after_success:
   - bash <(curl -s https://codecov.io/bash)
 ```
+
 > Reference http://docs.travis-ci.com/user/languages/objective-c/
 
-> All other CI you can simply run `bash <(curl -s https://codecov.io/bash)`.
+The two important parts are: 
+* `GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES` (To have Xcode create code coverage files)
+* `bash <(curl -s https://codecov.io/bash)` (To upload code coverage to Codecov.io)
+
+This is used to have Xcode output code coverage files for Codecov.io to process. 
 
 ## Private Repos
 > Set `CODECOV_TOKEN` in your environment variables.
@@ -45,3 +50,4 @@ View source and learn more about [Codecov Global Uploader][4]
 [2]: https://twitter.com/codecov
 [3]: mailto:hello@codecov.io
 [4]: https://github.com/codecov/codecov-bash
+
