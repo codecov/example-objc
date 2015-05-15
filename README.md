@@ -6,6 +6,12 @@ Codecov Xcode Example
 
 This repository serves as an **example** on how to use [Codecov Global][4] for Xcode in both Objective-C and Swift.
 
+# Setup
+
+* Create a shared scheme for your test target https://i.imgur.com/JKNFq0G.png
+* Write unit tests
+* Setup your CI
+
 # Travis CI
 
 Add to your `.travis.yml` file.
