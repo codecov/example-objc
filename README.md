@@ -1,5 +1,6 @@
 Codecov Xcode Example
 ==================
+[![codecov.io](http://codecov.io/github/codecov/example-xcode/coverage.svg?branch=master)](http://codecov.io/github/codecov/example-xcode?branch=master)
 
 | [https://codecov.io][1] | [@codecov][2] | [hello@codecov.io][3] |
 | ----------------------- | ------------- | --------------------- |
@@ -19,7 +20,7 @@ Add to your `.travis.yml` file.
 ```yml
 language: objective-c
 script: 
-  - xctool -project {{path_to_xcproject}} -scheme {{your_testing_schema}} build test -sdk iphonesimulator GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES
+  - xctool -project {{path_to_xcodeproj}} -scheme {{your_testing_scheme}} build test -sdk iphonesimulator GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES
 after_success:
   - bash <(curl -s https://codecov.io/bash)
 ```
