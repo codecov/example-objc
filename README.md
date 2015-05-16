@@ -9,6 +9,7 @@ This repository serves as an **example** on how to use [Codecov Global][4] for X
 # Setup
 
 * Create a shared scheme for your test target https://i.imgur.com/JKNFq0G.png
+* At the highest, your deployment target can be 8.1 or earlier. This will update as Travis supports more simulators.
 * Write unit tests
 * Setup your CI
 

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>AC194396-9BD0-446D-AB14-BD42A6E45646</string>
+	<key>IDESourceControlProjectName</key>
+	<string>example</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>6F421AF47AA2F3FF7F5102434F9B94882A706864</key>
+		<string>https://github.com/codecov/example-objective-c.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>example.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>6F421AF47AA2F3FF7F5102434F9B94882A706864</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/codecov/example-objective-c.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>6F421AF47AA2F3FF7F5102434F9B94882A706864</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>6F421AF47AA2F3FF7F5102434F9B94882A706864</string>
+			<key>IDESourceControlWCCName</key>
+			<string>example-objective-c</string>
+		</dict>
+	</array>
+</dict>
+</plist>
