@@ -13,6 +13,8 @@ This repository serves as an **example** on how to use [Codecov Global][4] for X
 * At the highest, your deployment target can be 8.1 or earlier. This will update as Travis supports more simulators.
 * Write unit tests
 * Setup your CI
+ 
+> `xctool` also does not respect the /Scheme/TestAction/@codeCoverageEnabled setting in .xcscheme files. Make sure  `-enableCodeCoverage YES` is set.
 
 # Travis CI
 
