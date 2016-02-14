@@ -1,6 +1,6 @@
-Codecov Xcode Example
+Codecov Objective-C Example
 ==================
-[![codecov.io](http://codecov.io/github/codecov/example-xcode/coverage.svg?branch=master)](http://codecov.io/github/codecov/example-xcode?branch=master)
+[![codecov.io](http://codecov.io/github/codecov/example-objc/coverage.svg?branch=master)](http://codecov.io/github/codecov/example-objc?branch=master)
 
 | [https://codecov.io][1] | [@codecov][2] | [hello@codecov.io][3] |
 | ----------------------- | ------------- | --------------------- |
