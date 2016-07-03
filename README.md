@@ -1,6 +1,6 @@
 Codecov Objective-C Example
 ==================
-[![codecov.io](http://codecov.io/github/codecov/example-objc/coverage.svg?branch=master)](http://codecov.io/github/codecov/example-objc?branch=master)
+[![codecov.io](http://codecov.io/github/codecov/example-objc/branch/master/graphs/badge.svg)](http://codecov.io/github/codecov/example-objc)
 
 | [https://codecov.io][1] | [@codecov][2] | [hello@codecov.io][3] |
 | ----------------------- | ------------- | --------------------- |
@@ -44,6 +44,17 @@ after_success:
   - bash <(curl -s https://codecov.io/bash) -t :uuid-repo-token
 ```
 > Or you can set the enviornment variable `CODECOV_TOKEN` to your token.
+
+## Build specific projects
+
+```
+# match ExampleName and ExampleNameTests
+bash <(curl -s https://codecov.io/bash) -J 'ExampleName'
+
+# user regexp to match only ExampleName and not ExampleNameTests
+bash <(curl -s https://codecov.io/bash) -J '^ExampleName$'
+```
+
 
 View source and learn more about [Codecov Global Uploader][4]
 
