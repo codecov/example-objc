@@ -55,7 +55,6 @@ bash <(curl -s https://codecov.io/bash) -J 'ExampleName'
 bash <(curl -s https://codecov.io/bash) -J '^ExampleName$'
 ```
 
-
 View source and learn more about [Codecov Global Uploader][4]
 
 [1]: https://codecov.io/
