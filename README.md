@@ -62,4 +62,3 @@ View source and learn more about [Codecov Global Uploader][4]
 [2]: https://twitter.com/codecov
 [3]: mailto:hello@codecov.io
 [4]: https://github.com/codecov/codecov-bash
-
