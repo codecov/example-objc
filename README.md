@@ -1,11 +1,9 @@
-Codecov Objective-C Example
-==================
-[![codecov.io](http://codecov.io/github/codecov/example-objc/branch/master/graphs/badge.svg)](http://codecov.io/github/codecov/example-objc)
-
-| [https://codecov.io][1] | [@codecov][2] | [hello@codecov.io][3] |
-| ----------------------- | ------------- | --------------------- |
+[Codecov][1] Objective-C Example
+================================
 
 This repository serves as an **example** on how to use [Codecov Global][4] for Xcode in both Objective-C and Swift.
+
+[![codecov.io](http://codecov.io/github/codecov/example-objc/branch/master/graphs/badge.svg)](http://codecov.io/github/codecov/example-objc)
 
 # Setup
 
