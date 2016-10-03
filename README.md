@@ -3,6 +3,8 @@
 
 This repository serves as an **example** on how to use [Codecov Global][4] for Xcode in both Objective-C and Swift.
 
+> PS there is a Swift specific example here https://github.com/codecov/example-swift
+
 [![codecov.io](http://codecov.io/github/codecov/example-objc/branch/master/graphs/badge.svg)](http://codecov.io/github/codecov/example-objc)
 
 # Setup
