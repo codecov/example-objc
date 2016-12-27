@@ -43,7 +43,7 @@ Add to your `.travis.yml` file.
 after_success:
   - bash <(curl -s https://codecov.io/bash) -t :uuid-repo-token
 ```
-> Or you can set the enviornment variable `CODECOV_TOKEN` to your token.
+> Or you can set the environment variable `CODECOV_TOKEN` to your token.
 
 ## Build specific projects
 
