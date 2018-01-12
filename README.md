@@ -1,22 +1,9 @@
-[Codecov][1] Objective-C Example
-================================
-
-This repository serves as an **example** on how to use [Codecov Global][4] for Xcode in both Objective-C and Swift.
-
+# [Codecov][1] Objective-C Example
+[![codecov.io](http://codecov.io/github/codecov/example-objc/branch/master/graphs/badge.svg)](http://codecov.io/github/codecov/example-objc)
 > PS there is a Swift specific example here https://github.com/codecov/example-swift
 
-[![codecov.io](http://codecov.io/github/codecov/example-objc/branch/master/graphs/badge.svg)](http://codecov.io/github/codecov/example-objc)
-
-# Setup
-
-* Create a shared scheme for your test target https://i.imgur.com/JKNFq0G.png
-* At the highest, your deployment target can be 8.1 or earlier. This will update as Travis supports more simulators.
-* Write unit tests
-* Setup your CI
- 
-> `xctool` also does not respect the /Scheme/TestAction/@codeCoverageEnabled setting in .xcscheme files. Make sure  `-enableCodeCoverage YES` is set.
-
-# Travis CI
+## Guide
+### Travis Setup
 
 Add to your `.travis.yml` file.
 ```yml
@@ -26,27 +13,20 @@ script:
 after_success:
   - bash <(curl -s https://codecov.io/bash)
 ```
+### Produce Coverage Reports
+The two important parts are:
 
-> Reference http://docs.travis-ci.com/user/languages/objective-c/
-
-The two important parts are: 
-* `GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES` (To have Xcode create code coverage files)
-* `bash <(curl -s https://codecov.io/bash)` (To upload code coverage to Codecov.io)
-
-This is used to have Xcode output code coverage files for Codecov.io to process. 
-
-## Private Repos
-> Set `CODECOV_TOKEN` in your environment variables.
-
+- `GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES` (To have Xcode create code coverage files)
+* Create a shared scheme for your test target https://i.imgur.com/JKNFq0G.png
+* xctool also does not respect the `/Scheme/TestAction/@codeCoverageEnabled` setting in `.xcscheme` files. Make sure `-enableCodeCoverage YES` is set.
+## Caveats
+### Private Repos
 Add to your `.travis.yml` file.
 ```yml
 after_success:
-  - bash <(curl -s https://codecov.io/bash) -t :uuid-repo-token
+  - bash <(curl -s https://codecov.io/bash) -t uuid-repo-token
 ```
-> Or you can set the environment variable `CODECOV_TOKEN` to your token.
-
-## Build specific projects
-
+### Build specific projects
 ```
 # match ExampleName and ExampleNameTests
 bash <(curl -s https://codecov.io/bash) -J 'ExampleName'
@@ -54,10 +34,20 @@ bash <(curl -s https://codecov.io/bash) -J 'ExampleName'
 # user regexp to match only ExampleName and not ExampleNameTests
 bash <(curl -s https://codecov.io/bash) -J '^ExampleName$'
 ```
+## Support
 
-View source and learn more about [Codecov Global Uploader][4]
+### Contact
+- Intercom (in-app messanger)
+- Email: support@codecov.io
+- Slack: slack.codecov.io
+- [gh/codecov/support](https://github.com/codecov/support)
+
+1. More documentation at https://docs.codecov.io
+2. Configure codecov through the `codecov.yml`  https://docs.codecov.io/docs/codecov-yaml
+
+
 
 [1]: https://codecov.io/
-[2]: https://twitter.com/codecov
-[3]: mailto:hello@codecov.io
-[4]: https://github.com/codecov/codecov-bash
+[2]: https://github.com/codecov/example-php/blob/master/.travis.yml#L15
+[3]: https://github.com/codecov/example-php/blob/master/.travis.yml#L18
+[4]: https://github.com/codecov/codecov-python
