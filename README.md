@@ -1,52 +1,31 @@
-[Codecov][1] Objective-C Example
-================================
+# [Codecov](https://codecov.io) Objective-C Example
+> For a Swift-specific example, see https://github.com/codecov/example-swift
 
-This repository serves as an **example** on how to use [Codecov Global][4] for Xcode in both Objective-C and Swift.
+## Guide
 
-> PS there is a Swift specific example here https://github.com/codecov/example-swift
-
-[![codecov.io](http://codecov.io/github/codecov/example-objc/branch/master/graphs/badge.svg)](http://codecov.io/github/codecov/example-objc)
-
-# Setup
-
-* Create a shared scheme for your test target https://i.imgur.com/JKNFq0G.png
-* At the highest, your deployment target can be 8.1 or earlier. This will update as Travis supports more simulators.
-* Write unit tests
-* Setup your CI
- 
-> `xctool` also does not respect the /Scheme/TestAction/@codeCoverageEnabled setting in .xcscheme files. Make sure  `-enableCodeCoverage YES` is set.
-
-# Travis CI
+### Travis Setup
 
 Add to your `.travis.yml` file.
 ```yml
 language: objective-c
-script: 
+script:
   - xctool -project {{path_to_xcodeproj}} -scheme {{your_testing_scheme}} build test -sdk iphonesimulator GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES
 after_success:
   - bash <(curl -s https://codecov.io/bash)
 ```
 
-> Reference http://docs.travis-ci.com/user/languages/objective-c/
+### Produce Coverage Reports
+The two important parts are:
 
-The two important parts are: 
-* `GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES` (To have Xcode create code coverage files)
-* `bash <(curl -s https://codecov.io/bash)` (To upload code coverage to Codecov.io)
+- `GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES` (To have Xcode create code coverage files)
+* Create a shared scheme for your test target https://i.imgur.com/JKNFq0G.png
+* xctool also does not respect the `/Scheme/TestAction/@codeCoverageEnabled` setting in `.xcscheme` files. Make sure `-enableCodeCoverage YES` is set.
 
-This is used to have Xcode output code coverage files for Codecov.io to process. 
+## Caveats
+### Private Repo
+Repository tokens are required for (a) all private repos, (b) public repos not using Travis-CI, CircleCI or AppVeyor. Find your repository token at Codecov and provide via appending `-t <your upload token>` to you where you upload reports.
 
-## Private Repos
-> Set `CODECOV_TOKEN` in your environment variables.
-
-Add to your `.travis.yml` file.
-```yml
-after_success:
-  - bash <(curl -s https://codecov.io/bash) -t :uuid-repo-token
-```
-> Or you can set the environment variable `CODECOV_TOKEN` to your token.
-
-## Build specific projects
-
+### Build specific projects
 ```
 # match ExampleName and ExampleNameTests
 bash <(curl -s https://codecov.io/bash) -J 'ExampleName'
@@ -55,11 +34,7 @@ bash <(curl -s https://codecov.io/bash) -J 'ExampleName'
 bash <(curl -s https://codecov.io/bash) -J '^ExampleName$'
 ```
 
-View source and learn more about [Codecov Global Uploader][4]
-
-We are happy to help if you have any questions. Please contact email our Support at [support@codecov.io](mailto:support@codecov.io)
-
-[1]: https://codecov.io/
-[2]: https://twitter.com/codecov
-[3]: mailto:hello@codecov.io
-[4]: https://github.com/codecov/codecov-bash
+## Links
+- [Community Boards](https://community.codecov.io)
+- [Support](https://codecov.io/support)
+- [Documentation](https://docs.codecov.io)
