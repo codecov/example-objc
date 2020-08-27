@@ -1,4 +1,6 @@
 # [Codecov](https://codecov.io) Objective-C Example
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fcodecov%2Fexample-objc.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fcodecov%2Fexample-objc?ref=badge_shield)
+
 > For a Swift-specific example, see https://github.com/codecov/example-swift
 
 ## Guide
@@ -38,3 +40,7 @@ bash <(curl -s https://codecov.io/bash) -J '^ExampleName$'
 - [Community Boards](https://community.codecov.io)
 - [Support](https://codecov.io/support)
 - [Documentation](https://docs.codecov.io)
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fcodecov%2Fexample-objc.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fcodecov%2Fexample-objc?ref=badge_large)
